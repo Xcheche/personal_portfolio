@@ -1,4 +1,14 @@
-<h1>Hello</h1>
+<h1>Chekwubechukwu Omenife Portfolio</h1>
+<!-- must be applied before static files can work -->
+{% load static %}  
+
+
+
+<img src="{%   static 'portfolio/cheche.png'%}" width="300" height="300" alt="japan-photo">
+
+
+
+<a href="{% static 'portfolio/mycv.pdf' %}">Resume</a>
 {% for project in projects %}
 
 <p>{{ project.title }}</p>

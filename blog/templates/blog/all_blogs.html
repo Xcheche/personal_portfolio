@@ -1,4 +1,4 @@
-{% for blog in blogs %}
+<a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
 <p>{{ blog.title }}</p>
 <p>{{ blog.description }}</p>
 <p>{{ blog.date }}</p>
