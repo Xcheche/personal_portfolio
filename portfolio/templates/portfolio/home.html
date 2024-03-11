@@ -1,23 +1,47 @@
-<h1>Chekwubechukwu Omenife Portfolio</h1>
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+    <h1>Chekwube<span style="color: blue;">chukwu</span> </h1>
 <!-- must be applied before static files can work -->
 {% load static %}  
 
 
+<a href="{% url 'blog:all_blogs' %}" target="_blank">Blog</a>
+<br>
 
-<img src="{%   static 'portfolio/cheche.png'%}" width="300" height="300" alt="japan-photo">
-
-
-
+<!-- Resume -->
 <a href="{% static 'portfolio/mycv.pdf' %}">Resume</a>
-{% for project in projects %}
+<br>
+<!-- End resume -->
 
-<p>{{ project.title }}</p>
-<p>{{ project.description }}</p>
+<!-- portfolio image -->
+<img src="{%   static 'portfolio/cheche.png'%}" class="card mx-auto d-block width="300" height="300" alt="my-photo">
+<!-- End portfolio image -->
 
-<img src="{{ project.image.url }}" alt="">
-{% if project.url %}
-<a href="{{ project.url }}">project-link</a>
-{% endif %}
+<!-- iterating/pulling projects from database -->
+
+<hr>
+<h3>Projects</h3>
+<div class="row">
+  {% for project in projects %}
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ project.title }}</h5>
+          <p class="card-text">{{ project.description }}</p>
+          {% if project.url %}
+            <a href="{{ project.url }}" class="btn btn-primary">project-link</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
 
 
-{% endfor %}
+<!-- End of  iterating projects -->
+
+
+{% endblock %}

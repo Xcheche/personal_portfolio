@@ -1,7 +1,19 @@
-<a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+{% extends 'portfolio/base.html' %}
+{% block content %}
+<!-- This section displays the number of blog posts and iterates over each blog -->
+<h2>Chekwubechukwu has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h2>
+
+{% for blog in blogs %}
+
+<a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2>
+</a>
 <p>{{ blog.title }}</p>
-<p>{{ blog.description }}</p>
-<p>{{ blog.date }}</p>
+<p>{{ blog.date|date:'M d Y'|upper }}</p>
+<p>{{ blog.description|striptags|truncatechars:100 }}</p>
+
 
 
 {% endfor %}
+
+
+{% endblock %}
