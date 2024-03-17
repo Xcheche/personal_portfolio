@@ -2,8 +2,9 @@
     color: rgba(0,0,0,1) !important;
 }
 
+
 .navbar-nav .nav-link:hover {
-    color: rgba(0,0,0,.5) !important;
+    color: rgba(0, 0, 0, 0.5) !important;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
     height: 100px; /* Adjust height as needed */
     object-fit: cover; /* Optional: Maintain aspect ratio */
   }
-
+/* scroll from down */
   
   #scroll-to-top {
     position: fixed;  /* Fix the button to a position */
