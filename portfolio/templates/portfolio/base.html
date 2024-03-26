@@ -84,41 +84,7 @@
 
   
     
-    <form class="form"
-    action="https://formspree.io/f/mknlgndv"
-    method="POST"
-    onsubmit="return submitForm(event)"
-  >
-    <label for="phone">Phone Number:</label>
-    <input
-      type="text"
-      id="phone"
-      name="phone"
-      placeholder="Enter your phone number"
-      required
-    />
-
-    <label for="email">Email:</label>
-    <input
-      type="email"
-      id="email"
-      name="_replyto"
-      placeholder="Enter your email"
-      required
-    />
-
-    <label for="message">Message:</label>
-    <textarea
-      id="message"
-      name="message"
-      placeholder="Enter your message"
-      required
-    ></textarea>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-    
-  </form>
-  <div id="success-message" style="display: none"></div>
+   
   
   <a href="{% url 'blog:all_blogs' %}" class="blog">Blog</a><br>
   <a href="{% static 'portfolio/mycv.pdf' %}" class="resume">Resume</a><br>

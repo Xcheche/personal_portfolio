@@ -51,28 +51,7 @@ body {
   }
 
 
-  .form{
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  #message{
-    border-radius: 10px;
-    width: 300px;
-    height: 100px;
-  }
-
-  #email, #phone{
-    border-radius: 10px;
-    width: 150px;
-    
-  }
-  .btn btn-primary{
-    border-radius: 10px;
-    width: 150px;
-  }
-
+  
 
   /* bio */
   .bio{
