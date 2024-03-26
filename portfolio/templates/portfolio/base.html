@@ -63,7 +63,7 @@ logged in as {{ user.username }}
     <button type="submit">Logout</button>
 </form>
 {% else %}
-<a href="{% url 'signupuser' %}">Sign Up</a><br>
+<a href="{% url 'signupuser' %}">Sign Up</a><br><br>
 <a href="{% url 'loginuser' %}">Login</a>
 {% endif %}
 
