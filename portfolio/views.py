@@ -7,8 +7,9 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 # Create your views here.
-
+# @login_required
 def signupuser(request):
     if request.method == 'GET':
         return render(request, 'portfolio/signupuser.html', {'form': UserCreationForm()})
@@ -26,7 +27,7 @@ def signupuser(request):
         else:
             return render(request, 'portfolio/signupuser.html', {'form': UserCreationForm(), 'error': 'Passwords did not match'})
 
-
+# @login_required
 def loginuser(request):
     if request.method == 'GET':
         return render(request, 'portfolio/loginuser.html', {'form': AuthenticationForm()})
@@ -38,12 +39,12 @@ def loginuser(request):
             login(request, user)
             return redirect('home')
         
-
+@login_required
 def logoutuser(request):
     if request.method == 'POST':
         logout(request)
         return redirect('home')
-
+@login_required
 def home(request):
     projects = Project.objects.all()
     return render(request, 'portfolio/home.html', {'projects': projects})
