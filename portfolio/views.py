@@ -57,7 +57,7 @@ def home(request):
 @login_required
 def contact(request):
    
-    name = 'Chekubechukwu'
+    name = 'Chekwubechukwu Omenife'
     Phone_number = +2347048706774
     Email = 'checheomenife@gmail.com'
     dt = datetime.datetime.now()
