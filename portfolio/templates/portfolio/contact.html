@@ -1,0 +1,18 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<a href="{% url 'home' %}" class="btn btn-outline-dark  rounded-pill">Home</a>
+
+<h1 class="text-center"> Contact Me</h1>
+<ul class="list-group">
+  
+    <li>Name: {{ name }}</li>
+    <li>Email: {{ Email }}</li>
+    <li>Phone Number: {{ Phone_number }}</li>
+    <li>Date and Time: {{ dt }}</li>
+</ul>
+
+{% endblock %}

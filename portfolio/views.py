@@ -1,3 +1,4 @@
+import datetime
 from django.shortcuts import render
 from .models import Project
 #
@@ -39,13 +40,25 @@ def loginuser(request):
             login(request, user)
             return redirect('home')
         
+
 @login_required
 def logoutuser(request):
     if request.method == 'POST':
         logout(request)
         return redirect('home')
+    
+
 @login_required
 def home(request):
     projects = Project.objects.all()
     return render(request, 'portfolio/home.html', {'projects': projects})
 
+
+@login_required
+def contact(request):
+   
+    name = 'Chekubechukwu'
+    Phone_number = +2347048706774
+    Email = 'checheomenife@gmail.com'
+    dt = datetime.datetime.now()
+    return render(request, 'portfolio/contact.html', {'dt': dt, 'name': name, 'Phone_number': Phone_number, 'Email': Email})
