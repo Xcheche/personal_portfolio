@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "portfolio",
+    'crispy_forms',
+    'crispy_bootstrap5',
 
 ]
 
@@ -124,7 +126,8 @@ STATIC_ROOT = BASE_DIR/"static"
 STATICFILES_DIRS =[
     'personal_portfolio/static'
     ]
-
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
