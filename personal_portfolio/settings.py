@@ -123,6 +123,7 @@ USE_TZ = True
 STATIC_URL = "static/"
 LOGIN_URL = "/login"
 STATIC_ROOT = BASE_DIR/"static"
+
 STATICFILES_DIRS =[
     'personal_portfolio/static'
     ]

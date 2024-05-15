@@ -15,6 +15,7 @@
   <script src="{% static "portfolio/scroll-to-top.js" %}" defer></script>
 
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  
 
   <link rel="icon" type="image/png" href="{% static "portfolio/Logo.png" %}">
   <link rel="shortcut icon" href="{% static "portfolio/Logo.png" %}" type="image/x-icon">
@@ -61,7 +62,7 @@
 logged in as {{ user.username }} 
 <form action="{% url 'logoutuser' %}" method="POST">
     {% csrf_token %}
-    <button type="submit" class="btn btn-outline-dark rounded-pill">Logout</button>
+    <button type="submit" class="btn btn-outline-dark rounded-pill mt-2">Logout</button>
 </form><br>
 {% else %}
 <a href="{% url 'signupuser' %}" class="btn btn-primary rounded-pill">Sign Up</a>
@@ -69,7 +70,11 @@ logged in as {{ user.username }}
 {% endif %}
 
 <!--  -->
+
+
     {% block content %}{% endblock %}
+
+   
   </div>
  
   <!-- Optional JavaScript -->
