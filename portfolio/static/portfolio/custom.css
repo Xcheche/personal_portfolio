@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'roboto', sans-serif;
 }
 
 #blogtitle {
@@ -68,4 +68,36 @@ body {
     margin-top: 1rem;
     
   }
+/* contact me */
+.contact_me{
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+  background-color: #ccc;
+  
+}
+
+
+
+/* circular image */
+  .circular-image-container{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.circular-image{
+    width: 120%;
+    height: auto;
+    display: block;
+}
 

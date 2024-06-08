@@ -1,56 +1,62 @@
-{% extends 'portfolio/base.html' %}
+{% extends 'portfolio/base.html' %} {% block content %}
 
-{% block content %}
-
-    <h1>Chekwube<span style="color: blue;">chukwu</span> </h1>
+<h1>Chekwube<span style="color: blue">chukwu</span></h1>
 <!-- must be applied before static files can work -->
-{% load static %}  
-
+{% load static %}
 
 <a href="{% url 'blog:all_blogs' %}" target="_blank">Blog</a>
-<br>
+<br />
 
 <!-- Resume -->
 <a href="{% static 'portfolio/mycv.pdf' %}">Resume</a>
 
-<br>
+<br />
 <!-- End resume -->
 
 <!-- portfolio image -->
-<img src="{%   static 'portfolio/cheche2.jpeg'%}" class="card mx-auto d-block width="300" height="300" alt="my-photo">
+<div class="col-12 d-flex justify-content-center align-items-center mb-3">
+  <div class="circular-image-container">
+    <img class="circular-image" src="{% static 'portfolio/cheche2.jpeg'%}"
+    class="card mx-auto d-block width="300" height="300" alt="my-photo">
+  </div>
+</div>
 <!-- End portfolio image -->
 
 <!-- iterating/pulling projects from database -->
-<h1 class="bio" d-flex justify-content-center>I'm Chekwube<span style="color: blue;">chukwu</span> Omenife, a software developer <br>proficient in the following stack: HTML, CSS, JavaScript, Bootstrap, Python, Dart, Flutter, PostgreSQL, sqlite3, WordPress, GitHub, Linux, Django. <p>Continuous learner, boundary pusher, project explorer. Feel free to reach out.</p>
+<h1 class="bio" d-flex justify-content-center>
+  I'm Chekwube<span style="color: blue">chukwu</span> Omenife, a software
+  developer <br />proficient in the following stack: HTML, CSS, JavaScript,
+  Bootstrap, Python, Dart, Flutter, PostgreSQL, sqlite3, WordPress, GitHub,
+  Linux, Django.
+  <p>
+    Continuous learner, boundary pusher, project explorer. Feel free to reach
+    out.
+  </p>
 </h1>
-<hr>
+<hr />
 
 <h3>Projects</h3>
 <div class="row">
   {% for project in projects %}
-    <div class="col-md-2">
-      <div class="card">
-        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
-        <div class="card-body">
-          <h5 class="card-title">{{ project.title }}</h5>
-          <p class="card-text">{{ project.description }}</p>
-          {% if project.url %}
-            <a href="{{ project.url }}" class="btn btn-primary">project-link</a>
-          {% endif %}
-        </div>
+  <div class="col-md-2">
+    <div class="card">
+      <img
+        src="{{ project.image.url }}"
+        class="card-img-top"
+        alt="{{ project.title }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ project.title }}</h5>
+        <p class="card-text">{{ project.description }}</p>
+        {% if project.url %}
+        <a href="{{ project.url }}" class="btn btn-primary">project-link</a>
+        {% endif %}
       </div>
     </div>
+  </div>
   {% endfor %}
-
 </div>
 
-
 <!-- End of  iterating projects -->
-
-
-
-
-
-
 
 {% endblock %}

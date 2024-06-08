@@ -25,9 +25,9 @@
 </head>
 
 <body>
-
-  <nav id="topNav" class="navbar navbar-expand-md navbar-light">
-    <div class="container">
+{% comment %} navbar {% endcomment %}
+  <nav id="topNav" class="navbar navbar-expand-md navbar-light ">
+    <div class="container ">
       <a class="navbar-brand btn-outline-light rounded-pill" href="{% url 'home' %}">
         <img src="{% static "portfolio/Logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Nick's Logo">
         <span>Chekwube</span>
@@ -84,7 +84,7 @@ logged in as {{ user.username }}
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 <hr>
-<footer class="container-fluid bg-dark text-white py-3">
+<footer class="container-fluid bg-dark text-white py-3" >
   <div class="row">
     <div class="col">  <p>
         <i class="fab fa-whatsapp fa-sm"></i> <a href="tel:+2347048706774" class="text-white mx-2"> +2347048706774</a>
@@ -103,9 +103,12 @@ logged in as {{ user.username }}
     
    
   
-  <a href="{% url 'blog:all_blogs' %}" class="blog">Blog</a><br>
-  <a href="{% static 'portfolio/mycv.pdf' %}" class="resume">Resume</a><br>
-  <a href="mailto:checheomenife@gmail.com" class="fa fa-envelope fa-sm"><small>email</small></a>
+<div  style="text-decoration: none"   class="row d-flex justify-content-center  align-items-center m-2 p-2 mb-3 ">
+    <a href="{% url 'blog:all_blogs' %}" class="blog">Blog</a>&nbsp; &nbsp;
+  <a href="{% static 'portfolio/mycv.pdf' %}" class="resume">Resume</a>&nbsp; &nbsp;
+  <a href="mailto:checheomenife@gmail.com" class="fa fa-envelope fa-sm"><small>email</small></a>&nbsp; &nbsp;
+  <a href="/">Back To Home</a>
+</div>
   <p>&copy; 2024 Chekwube</p>
 </footer>
 

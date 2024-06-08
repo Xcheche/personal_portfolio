@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-3irszo*a+cxkpvtqz#nao(x*nuxxm$3s%737s_2(-a0fz&6hwm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['cheche.pythonanywhere.com']
+ALLOWED_HOSTS = ["cheche.pythonanywhere.com"]
 
 
 # Application definition
@@ -39,9 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "portfolio",
-    'crispy_forms',
-    'crispy_bootstrap5',
-
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -122,20 +121,18 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 LOGIN_URL = "/login"
-STATIC_ROOT = BASE_DIR/"static"
+STATIC_ROOT = BASE_DIR / "static"
 
-STATICFILES_DIRS =[
-    'personal_portfolio/static'
-    ]
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
-CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+STATICFILES_DIRS = ["personal_portfolio"]
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR/'media'
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 try:
     from .local_settings import *
