@@ -42,7 +42,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link btn-outline-light rounded-pill" href="https://www.linkedin.com/ebukaomenife" target="_blank">LinkedIn</a><br>
-            <a class="nav-link btn-outline-light rounded-pill" href="{% url 'contact' %}" target="_blank">Contact</a>
+            <a class="nav-link btn-outline-light rounded-pill" href="{% url 'contact_me' %}" target="_blank">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn-outline-light rounded-pill" href="https://twitter.com/xcheche" target="_blank">Twitter</a>     
@@ -59,14 +59,14 @@
  
 
   {% if user.is_authenticated %}
-logged in as {{ user.username }} 
-<form action="{% url 'logoutuser' %}" method="POST">
+<h4 class="text-center bg bg-secondary p-3 m-5"> Welcome to my portfolio {{ user.username }} !</h4>
+<form action="{% url 'logoutuser' %}" method="POST" class="text-center">
     {% csrf_token %}
     <button type="submit" class="btn btn-outline-dark rounded-pill mt-2">Logout</button>
 </form><br>
 {% else %}
-<a href="{% url 'signupuser' %}" class="btn btn-primary rounded-pill">Sign Up</a>
-<a href="{% url 'loginuser' %}" class="btn btn-primary rounded-pill">Login</a>
+<a href="{% url 'signupuser' %}" class="btn btn-outline-dark rounded-pill mx-5">Sign Up</a>
+<a href="{% url 'loginuser' %}" class="btn btn-outline-dark rounded-pill">Login</a>
 {% endif %}
 
 <!--  -->
@@ -109,7 +109,9 @@ logged in as {{ user.username }}
   <a href="mailto:checheomenife@gmail.com" class="fa fa-envelope fa-sm"><small>email</small></a>&nbsp; &nbsp;
   <a href="/">Back To Home</a>
 </div>
-  <p>&copy; 2024 Chekwube</p>
+ <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+      <p>Designed and developed by Chekwubechukwu Omenife</p>
+      <p>Powered by Django</p>
 </footer>
 
 
