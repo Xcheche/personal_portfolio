@@ -1,14 +1,14 @@
 {% extends 'portfolio/base.html' %} {% block content %}
 
-<h1>Chekwube<span style="color: blue">chukwu</span></h1>
+<h1 class="mx-4">Chekwube<span style="color: blue">chukwu</span></h1>
 <!-- must be applied before static files can work -->
 {% load static %}
 
-<a href="{% url 'blog:all_blogs' %}" target="_blank">Blog</a>
+<a class="mx-4" href="{% url 'blog:all_blogs' %}" target="_blank">Blog</a>
 <br />
 
 <!-- Resume -->
-<a href="{% static 'portfolio/mycv.pdf' %}">Resume</a>
+<a class="mx-4" href="{% static 'portfolio/mycv.pdf' %}">Resume</a>
 
 <br />
 <!-- End resume -->
@@ -16,8 +16,14 @@
 <!-- portfolio image -->
 <div class="col-12 d-flex justify-content-center align-items-center mb-3">
   <div class="circular-image-container">
-    <img class="circular-image" src="{% static 'portfolio/cheche2.jpeg'%}"
-    class="card mx-auto d-block width="300" height="300" alt="my-photo">
+    <img
+      class="circular-image"
+      src="{% static 'portfolio/cheche2.jpeg'%}"
+      class="card mx-auto d-block"
+      width="300"
+      height="300"
+      alt="my-photo"
+    />
   </div>
 </div>
 <!-- End portfolio image -->
@@ -35,8 +41,8 @@
 </h1>
 <hr />
 
-<h3>Projects</h3>
-<div class="row">
+<h3 class="text-center">Projects</h3>
+<div class="row mx-5">
   {% for project in projects %}
   <div class="col-md-2">
     <div class="card">
