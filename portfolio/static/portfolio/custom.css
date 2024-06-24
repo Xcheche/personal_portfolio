@@ -79,7 +79,14 @@ body {
   background-color: #ccc;
   
 }
-
+.contact-form{
+  background-color: darkgrey;
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  
+  border-radius: 20%;
+}
 
 
 /* circular image */
@@ -101,3 +108,29 @@ body {
     display: block;
 }
 
+/* marquese */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    margin: auto;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+/* 
+end of marquese */

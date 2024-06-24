@@ -20,7 +20,7 @@
       {% endfor %} {% endif %}
 
       <!--form -->
-      <form method="post" novalidate class="p-5 m-10">
+      <form method="post" novalidate class="p-5 m-10 contact-form">
         {% csrf_token %} {{ form|crispy }}
 
         <button class="bt btn-outline-dark rounded-pill" type="submit">
